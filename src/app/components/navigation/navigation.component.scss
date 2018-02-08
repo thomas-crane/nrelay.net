@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  min-width: 150px;
+  max-width: 200px;
+  flex-wrap: wrap;
+}
+.button {
+  flex: 1 1 auto;
+  margin: 8px;
+}
