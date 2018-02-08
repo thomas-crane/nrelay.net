@@ -1,0 +1,13 @@
+:host {
+  z-index: 100;
+  display: block;
+}
+.mat-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.title {
+  margin: auto 8px;
+  font-size: 2em;
+}
