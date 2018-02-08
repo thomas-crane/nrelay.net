@@ -1,0 +1,53 @@
+:host {
+    display: block;
+}
+
+.download {
+  max-width: 650px;
+  margin: 36px auto;
+}
+
+h1.title {
+  width: 100%;
+  font-size: 5em;
+  margin-top: 36px;
+  text-align: center;
+}
+.dual-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  align-items: center;
+  flex-wrap: wrap;
+  button {
+    flex: 1 1 auto;
+    margin: 16px;
+    max-width: 300px;
+  }
+  .version {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    .mat-icon {
+      margin: 8px;
+    }
+  }
+}
+
+.mat-icon.spinnable {
+  transition: transform ease 350ms;
+}
+
+.spin-animation {
+  animation: spin 2s infinite;
+}
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}

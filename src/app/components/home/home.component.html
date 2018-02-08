@@ -1,0 +1,19 @@
+<h1 class="title">nrelay</h1>
+<mat-card class="download" [@fadeUp]>
+  <mat-card-title>
+    Download nrelay
+  </mat-card-title>
+  <mat-card-content class="dual-container">
+    <button (click)="openDialog(true)" color="primary" mat-raised-button>DOWNLOAD STABLE
+      <br>
+      <span class="version">
+        <mat-icon class="spinnable" [class.spin-animation]="!devVersion">{{masterVersion ? 'info_outline' : 'refresh'}}</mat-icon>{{masterVersion ? 'v' + masterVersion : '...'}}</span>
+    </button>
+    <button (click)="openDialog(false)" color="accent" mat-raised-button>DOWNLOAD LATEST
+      <br>
+      <span class="version">
+        <mat-icon class="spinnable" [class.spin-animation]="!devVersion">{{devVersion ? 'info_outline' : 'refresh'}}</mat-icon>{{devVersion ? 'v' + devVersion : '...'}}</span>
+    </button>
+  </mat-card-content>
+</mat-card>
+<nr-download-dialog [@fadeUp] [maxWidth]="dialogWidth" *ngIf="showDialog" (shouldClose)="showDialog = false" [text]="dialogText"></nr-download-dialog>
