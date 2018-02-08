@@ -1,0 +1,22 @@
+<mat-list>
+  <h3 mat-subheader>Folders</h3>
+  <mat-list-item *ngIf="pathHistory && pathHistory.length > 1" class="item" (click)="goBack()">
+    <mat-icon mat-list-icon>folder_open</mat-icon>
+    <h4 mat-line>..</h4>
+  </mat-list-item>
+  <mat-list-item class="item" mat-button *ngFor="let item of folders" (click)="followPath(item)">
+    <mat-icon mat-list-icon>folder</mat-icon>
+    <h4 mat-line>{{item.name}}</h4>
+    <p mat-line> {{item.path}} </p>
+  </mat-list-item>
+  <h3 mat-subheader>Docs</h3>
+  <mat-list-item class="item" mat-button *ngFor="let item of docs" (click)="followPath(item)">
+    <mat-icon mat-list-icon>event_note</mat-icon>
+    <h4 mat-line>{{item.name}}</h4>
+    <p mat-line> {{item.path}} </p>
+  </mat-list-item>
+</mat-list>
+<mat-card *ngIf="currentDoc" class="doc-card">
+
+  <mat-card-content [nrMdRenderer]="currentDoc.content"></mat-card-content>
+</mat-card>
