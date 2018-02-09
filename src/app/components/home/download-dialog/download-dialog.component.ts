@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, HostListener, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Inject, HostListener, Output, EventEmitter, Input, ElementRef } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material';
 
 @Component({
@@ -7,7 +7,11 @@ import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material';
   styleUrls: ['./download-dialog.component.scss']
 })
 export class DownloadDialogComponent {
-  constructor() { }
+  constructor(elementRef: ElementRef) {
+    setTimeout(() => {
+      elementRef.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  }
 
   @Input()
   text: string;
