@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  margin: 16px;
+}
+
+.section {
+  margin: 16px auto 46px auto;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  .title {
+    font-size: 3em;
+    line-height: 1.5em;
+  }
+  p {
+    font-size: 1.4em;
+    line-height: 1.5em;
+  }
+  ol {
+    li {
+      margin-left: 5%;
+      margin-bottom: 24px;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 200;
+      h1.title {
+        margin-bottom: 8px;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 200;
+      }
+      p.description {
+        font-size: 0.7em;
+        font-weight: normal;
+      }
+    }
+  }
+}

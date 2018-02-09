@@ -1,0 +1,114 @@
+<span class="section">
+  <h1 class="title">About nrelay</h1>
+  <p>
+    nrelay is a console-based client for Realm of the Mad God. By itself, it will connect a character to the Nexus and will ensure
+    the character stays connected.
+    <br>
+    <br> nrelay supports running plugins which can interact with the game traffic and connected clients.
+  </p>
+  <br>
+  <p>
+    nrelay was built using NodeJS as the runtime and TypeScript as the language. The gulp-cli is used to build the source code.
+  </p>
+  <p>
+    TypeScript is a good choice when creating larger projects because it provides type safety. NodeJS includes buffer and networking
+    modules which are essential for the networking code used in nrelay.
+  </p>
+</span>
+<span class="section">
+  <h1 class="title">Design goals</h1>
+  <p>
+    When working on the source code of nrelay, several design goals have been kept in mind to ensure the code runs in a well
+    defined manner.
+  </p>
+  <ol>
+    <li>
+      <span>
+        <h1 class="title">Maintain backwards compatibility.</h1>
+        <p class="description">
+          Maintaining backwards compatibility between updates ensures that a plugin written for a certain major version of nrelay will
+          work on any other version with the same major version.
+        </p>
+      </span>
+    </li>
+    <li>
+      <span>
+        <h1 class="title">Provide as much functionality as the vanilla client.</h1>
+        <p class="description">
+          Providing as much functionality as possible means the bot can perform almost as many tasks as the vanilla client can. There
+          are currently some features such as shooting and moving, but there is still a large amount of functionality which
+          needs to be implemented.
+        </p>
+      </span>
+    </li>
+    <li>
+      <span>
+        <h1 class="title">Make plugins easy to write.</h1>
+        <p class="description">
+          Most new features which are added are to improve the experience of developing a plugin. nrelay currently provides multiple
+          features such as plugin interop, game resource loading and pre-built components.
+        </p>
+      </span>
+    </li>
+  </ol>
+</span>
+<span class="section">
+  <h1 class="title">What can it be used for</h1>
+  <p>
+    nrelay can be used to run one or more bots simultaneously to provide a range of functionality and services. Since nrelay
+    is built using NodeJS, other npm modules can be included to extend functionality.
+    <br>
+    <br>For example, Firebase by Google can be added provide a database backed. There are also modules for MySQL and MongoDB.
+    <br>
+    <br>There are still many bots that can be built without additional modules.
+  </p>
+  <ol>
+    <li>
+      <span>
+        <h1 class="title">Trade bots.</h1>
+        <p class="description">
+          Plugins have access to all client inventories and can perform actions when trade packets are received.
+        </p>
+      </span>
+      <span>
+        <h1 class="title">Stat bots.</h1>
+        <p class="description">
+          nrelay includes a pre-built plugin component which provides the ability to monitor players entering and leaving the map which
+          the bot is in. This can be used to provide a similar functionality to realmeye.
+          <br> Using the information, stats like real-time player counts and most popular class can be stored or displayed.
+        </p>
+      </span>
+    </li>
+    <li>
+      <span>
+        <h1 class="title">Communicating with KRelay.</h1>
+        <p class="description">
+          Data can be sent between nrelay and KRelay through a local web server. NodeJS provides in built modules which provide several
+          ways to make creating a local web server very easy.
+          <br> When the web server is running, KRelay can connect to the web server to send and receive data.
+        </p>
+      </span>
+    </li>
+  </ol>
+  <p>With one or two additional modules from npm, the possibilities are greatly extended.</p>
+  <ol>
+    <li>
+      <span>
+        <h1 class="title">Discord bots.</h1>
+        <p class="description">
+          A discord bot can be created inside of a plugin to provide messaging functionality to other plugins. This could be used to
+          verify discord accounts through a PM to a bot, send messages when a guild member enters the nexus, and many other
+          features.
+        </p>
+      </span>
+      <span>
+        <h1 class="title">Bots with database storage.</h1>
+        <p class="description">
+          There are many npm modules which provide easy ways to store and retreive data. Firebase is a NoSQL database which also includes
+          authentication and hosting which can be used in nrelay. There are npm modules for many other popular databases
+          too.
+        </p>
+      </span>
+    </li>
+  </ol>
+</span>

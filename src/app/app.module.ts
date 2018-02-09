@@ -21,6 +21,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DbService } from './services/db.service';
 import { environment } from '../environments/environment';
 import { MessageLogComponent } from './components/message-log/message-log.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { MessageLogComponent } from './components/message-log/message-log.compon
     DownloadDialogComponent,
     MdRendererDirective,
     NotFoundComponent,
-    MessageLogComponent
+    MessageLogComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
