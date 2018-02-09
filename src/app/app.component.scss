@@ -8,7 +8,11 @@
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  .mat-drawer, .mat-drawer-content {
+  .mat-drawer {
+    min-width: 216px;
+    max-width: 216px;
+  }
+  .mat-drawer-content {
       padding: 16px;
   }
   .mat-drawer-content {

@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
+import { MatDrawer } from '@angular/material';
 
 @Component({
   selector: 'nr-root',
@@ -8,6 +9,9 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class AppComponent implements OnInit {
   sideMode = 'side';
   opened = true;
+
+  @ViewChild(MatDrawer)
+  drawer: MatDrawer;
 
   @HostListener('window:resize', ['$event'])
   windowResize(event: any) {
@@ -37,5 +41,12 @@ export class AppComponent implements OnInit {
 
   openDrawer(): void {
     this.opened = true;
+  }
+
+  buttonClicked(): void {
+    if (this.sideMode === 'over') {
+      this.opened = false;
+      this.drawer.close();
+    }
   }
 }
