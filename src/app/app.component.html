@@ -1,6 +1,6 @@
 <nr-toolbar (menuClick)="sidenav.toggle()" class="mat-elevation-z6"></nr-toolbar>
 <mat-drawer-container class="container">
-  <mat-drawer #sidenav mode="side" opened="true" class="mat-elevation-z6 sidenav">
+  <mat-drawer #sidenav [mode]="sideMode" [opened]="opened" class="mat-elevation-z6 sidenav">
     <nr-navigation></nr-navigation>
   </mat-drawer>
   <mat-drawer-content class="main">
