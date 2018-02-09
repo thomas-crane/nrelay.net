@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>Live demo.</mat-card-title>
+  <mat-card-content>
+    <p>This is a partial feed of the chat in USWest2.</p>
+    <span class="message-box">
+      <span class="item" [@growDown] *ngFor="let item of db.messageLog | async">
+        <mat-icon class="star" [class.light-blue-star]="item.stars <= 13" [class.blue-star]="item.stars > 13 && item.stars <= 27" [class.red-star]="item.stars > 27 && item.stars <= 41"
+          [class.orange-star]="item.stars > 41 && item.stars <= 55" [class.yellow-star]="item.stars > 55 && item.stars <= 69"
+          [class.white-star]="item.stars === 70">star</mat-icon>
+        <span class="name">{{item.name}}:</span>
+        <span class="message">{{item.message}}</span>
+      </span>
+    </span>
+  </mat-card-content>
+</mat-card>

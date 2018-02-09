@@ -13,11 +13,11 @@ export const fadeUp = trigger('fadeUp', [
 
 export const growDown = trigger('growDown', [
   transition(':enter', [
-    style({ height: 0, overflow: 'hidden', padding: '0 *', margin: '0 *' }),
-    animate('350ms ease', style({ height: '*', padding: '* *', margin: '* *' }))
+    style({ height: 0, overflow: 'hidden', 'padding-top': '0', 'padding-bottom': '0' }),
+    animate('350ms ease', style({ height: '*', 'padding-top': '*', 'padding-bottom': '*' }))
   ]),
   transition(':leave', [
-    style({ height: '*', overflow: 'hidden', padding: '* *', margin: '* *' }),
-    animate('350ms ease', style({ height: 0, padding: '0 *', margin: '0 *' }))
+    style({ height: '*', overflow: 'hidden', 'padding-top': '*', 'padding-bottom': '*' }),
+    animate('350ms ease', style({ height: 0, 'padding-top': '0', 'padding-bottom': '0' }))
   ])
 ]);
