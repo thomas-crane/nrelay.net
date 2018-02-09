@@ -4,7 +4,7 @@ node_js:
 script:
   - echo "Deploying"
   - npm install
-  - npm run build prod
+  - npm run build
 install:
 after_success:
   - npm run firebase
