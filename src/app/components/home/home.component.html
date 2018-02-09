@@ -1,4 +1,13 @@
-<h1 class="title">nrelay</h1>
+<span class="text-area">
+  <img src="assets/logo.png">
+  <p class="bigger">A framework for powerful RotMG bots.</p>
+  <p class="left">
+    nrelay is a console based modular client for Realm of the Mad God built with NodeJS and TypeScript. It was built with flexibility
+    and plugin development in mind, and a major design goal of nrelay is to make writing plugins both rewarding and easy.
+    <br>
+    Because it is built on NodeJS, integrating other npm modules is as easy as using <code>npm install</code>. nrelay is also packaged with several pre-built plugin components to provide useful functionality right out of the box.
+  </p>
+</span>
 <mat-card class="download" [@fadeUp]>
   <mat-card-title>
     Download nrelay
@@ -16,4 +25,6 @@
     </button>
   </mat-card-content>
 </mat-card>
-<nr-download-dialog [@fadeUp] [maxWidth]="dialogWidth" *ngIf="showDialog" (shouldClose)="showDialog = false" [text]="dialogText"></nr-download-dialog>
+<nr-download-dialog [@growDown] [link]="link" [maxWidth]="dialogWidth" *ngIf="showDialog" (shouldClose)="showDialog = false"
+  [text]="dialogText"></nr-download-dialog>
+<nr-message-log></nr-message-log>

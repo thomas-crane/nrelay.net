@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   showDialog = false;
   dialogText: string;
   dialogWidth = 500;
+  link = '//github.com/thomas-crane/nrelay/archive/master.zip';
   masterVersion: string;
   devVersion: string;
   isDestroyed: Subject<any> = new Subject();
@@ -41,9 +42,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (stable) {
       this.dialogWidth = 500;
       this.dialogText = 'git clone https://github.com/thomas-crane/nrelay.git';
+      this.link = '//github.com/thomas-crane/nrelay/archive/master.zip';
     } else {
       this.dialogWidth = 600;
       this.dialogText = 'git clone -b dev git clone https://github.com/thomas-crane/nrelay.git';
+      this.link = '//github.com/thomas-crane/nrelay/archive/dev.zip';
     }
     this.showDialog = true;
   }

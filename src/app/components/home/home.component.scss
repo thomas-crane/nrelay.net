@@ -1,24 +1,47 @@
 :host {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
 }
 
 .download {
+  width: 100%;
   max-width: 650px;
-  margin: 36px auto;
+  margin: 16px auto;
+  z-index: 10;
 }
 
-h1.title {
-  width: 100%;
-  font-size: 5em;
-  margin-top: 36px;
+.text-area {
+  margin: 0 auto;
+  max-width: 800px;
+  display: block;
   text-align: center;
+  p {
+    font-size: 1.1em;
+    line-height: 1.3em;
+  }
+  p.left {
+    text-align: left;
+  }
+  h1.title {
+    font-size: 5em;
+    text-align: center;
+    line-height: 1em;
+  }
+  p.bigger {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
 }
+
 .dual-container {
   display: flex;
   flex-direction: row;
   flex: 1 1 auto;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-around;
+
   button {
     flex: 1 1 auto;
     margin: 16px;
