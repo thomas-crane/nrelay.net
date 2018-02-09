@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -16,6 +18,9 @@ import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { MdRendererDirective } from './directives/md-renderer.directive';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { DbService } from './services/db.service';
+import { environment } from '../environments/environment';
+import { MessageLogComponent } from './components/message-log/message-log.component';
 
 
 @NgModule({
@@ -27,16 +32,19 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     DocsComponent,
     DownloadDialogComponent,
     MdRendererDirective,
-    NotFoundComponent
+    NotFoundComponent,
+    MessageLogComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialImportsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
-  providers: [GithubService],
+  providers: [GithubService, DbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
