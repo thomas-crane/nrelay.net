@@ -1,5 +1,5 @@
 <span class="text-area">
-  <img class="logo" src="assets/logo.png">
+  <img alt="nrelay" class="logo" src="assets/logo.png">
   <p class="bigger">A framework for powerful RotMG bots.</p>
   <p class="left">
     nrelay is a console based modular client for Realm of the Mad God built with NodeJS and TypeScript. It was built with flexibility
@@ -13,12 +13,12 @@
     Download nrelay
   </mat-card-title>
   <mat-card-content class="dual-container">
-    <button (click)="openDialog(true)" color="primary" mat-raised-button>DOWNLOAD STABLE
+    <button (click)="openDialog(true)" name="Download stable" color="primary" mat-raised-button>DOWNLOAD STABLE
       <br>
       <span class="version">
         <mat-icon class="spinnable" [class.spin-animation]="!devVersion">{{masterVersion ? 'info_outline' : 'refresh'}}</mat-icon>{{masterVersion ? 'v' + masterVersion : '...'}}</span>
     </button>
-    <button (click)="openDialog(false)" color="accent" mat-raised-button>DOWNLOAD LATEST
+    <button (click)="openDialog(false)" name="Download latest" color="accent" mat-raised-button>DOWNLOAD LATEST
       <br>
       <span class="version">
         <mat-icon class="spinnable" [class.spin-animation]="!devVersion">{{devVersion ? 'info_outline' : 'refresh'}}</mat-icon>{{devVersion ? 'v' + devVersion : '...'}}</span>
