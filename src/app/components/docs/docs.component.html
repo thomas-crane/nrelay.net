@@ -1,6 +1,6 @@
 <mat-list>
   <h3 mat-subheader>Folders</h3>
-  <mat-list-item *ngIf="pathHistory && pathHistory.length > 1" class="item" (click)="goBack()">
+  <mat-list-item *ngIf="pathHistory && pathHistory.length > 1" class="item back-item" (click)="goBack()">
     <mat-icon mat-list-icon>folder_open</mat-icon>
     <h4 mat-line>..</h4>
   </mat-list-item>
