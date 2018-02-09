@@ -13,6 +13,9 @@ export class DownloadDialogComponent {
   text: string;
 
   @Input()
+  link: string;
+
+  @Input()
   maxWidth: number;
 
   @Output()
