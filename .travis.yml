@@ -4,9 +4,10 @@ node_js:
 script:
   - echo "Deploying"
   - npm install
-  - npm run build --prod
+  - npm run build prod
+install:
 after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
+  - npm run firebase
 branches:
   only:
     - master
