@@ -7,7 +7,7 @@ script:
   - npm run build
 install:
 after_success:
-  - npm run firebase
+  - npm run firebase -- --token=$FIREBASE_TOKEN
 branches:
   only:
     - master
