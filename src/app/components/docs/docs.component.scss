@@ -1,4 +1,5 @@
 .item {
+  flex: 1 0 auto;
   background-color: white;
   cursor: pointer;
   &.inset {
@@ -28,11 +29,16 @@
 :host {
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
-  padding: 16px;
+  flex: 1 0 auto;
+  margin: 16px;
+}
+
+.mat-list {
+  flex: 1 0 auto;
 }
 
 
 .doc-card {
+  flex: 1 0 auto;
   display: block;
 }
