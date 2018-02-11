@@ -22,7 +22,7 @@ export class GithubService {
   getPackageJSON(dev: boolean): Observable<any> {
     return this.httpClient.get<GithubResponse>(GITHUB_ROOT + 'package.json',
       { params: { ref: dev ? 'dev' : 'master' } }).pipe(take(1)).map((res) => {
-        const pkg = JSON.parse(atob(res.content));
+        const pkg = JSON.parse(atob(res.content.replace(/\s/g, '')));
         return pkg;
       });
   }

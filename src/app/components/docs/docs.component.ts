@@ -48,7 +48,7 @@ export class DocsComponent implements OnInit, OnDestroy {
           });
         } else {
           if (response.encoding && response.encoding === 'base64') {
-            response.content = atob(response.content);
+            response.content = atob(response.content.replace(/\s/g, ''));
           }
           this.currentDoc = response;
         }
