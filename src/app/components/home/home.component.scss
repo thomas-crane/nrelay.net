@@ -70,11 +70,8 @@
   }
 }
 
-.mat-icon.spinnable {
-  transition: transform ease 350ms;
-}
-
 .spin-animation {
+  transition: transform ease 350ms;
   animation: spin 2s infinite;
 }
 @keyframes spin {

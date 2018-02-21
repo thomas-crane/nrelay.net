@@ -16,12 +16,12 @@
     <button (click)="openDialog(true)" name="Download stable" color="primary" mat-raised-button>DOWNLOAD STABLE
       <br>
       <span class="version">
-        <mat-icon class="spinnable" [class.spin-animation]="!devVersion">{{masterVersion ? 'info_outline' : 'refresh'}}</mat-icon>{{masterVersion ? 'v' + masterVersion : '...'}}</span>
+        <mat-icon [class.spin-animation]="!masterVersion">{{masterVersion ? 'info_outline' : 'refresh'}}</mat-icon>{{masterVersion ? 'v' + masterVersion : '...'}}</span>
     </button>
     <button (click)="openDialog(false)" name="Download latest" color="accent" mat-raised-button>DOWNLOAD LATEST
       <br>
       <span class="version">
-        <mat-icon class="spinnable" [class.spin-animation]="!devVersion">{{devVersion ? 'info_outline' : 'refresh'}}</mat-icon>{{devVersion ? 'v' + devVersion : '...'}}</span>
+        <mat-icon [class.spin-animation]="!devVersion">{{devVersion ? 'info_outline' : 'refresh'}}</mat-icon>{{devVersion ? 'v' + devVersion : '...'}}</span>
     </button>
   </mat-card-content>
 </mat-card>
