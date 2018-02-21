@@ -2,6 +2,7 @@
   <mat-card-title>Live demo.</mat-card-title>
   <mat-card-content>
     <p>This is a partial feed of the chat in USWest2.</p>
+    <p><i>This demo is temporarily offline.</i></p>
     <span class="message-box">
       <span class="item" [@growDown] *ngFor="let item of db.messageLog | async">
         <mat-icon class="star" [class.light-blue-star]="item.stars <= 13" [class.blue-star]="item.stars > 13 && item.stars <= 27" [class.red-star]="item.stars > 27 && item.stars <= 41"

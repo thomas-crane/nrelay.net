@@ -37,7 +37,7 @@ export class DocsComponent implements OnInit, OnDestroy {
         this.router.navigate(['/docs', { path: 'docs' }]);
         return;
       }
-      this.gitService.getPath(GITHUB_ROOT + path, { ref: 'dev' }).pipe(takeUntil(this.isDestroyed)).subscribe((response) => {
+      this.gitService.getPath(GITHUB_ROOT + path, { ref: 'master' }).pipe(takeUntil(this.isDestroyed)).subscribe((response) => {
         if (Array.isArray(response)) {
           response.map((resp) => {
             if (resp.type === 'dir') {
