@@ -1,4 +1,13 @@
 <mat-toolbar color="primary">
   <button mat-icon-button (click)="onMenuClick()" name="Side bar"><mat-icon>menu</mat-icon></button>
-  <span class="title">nrelay</span>
+  <span class="title" routerLink="home">nrelay</span>
+  <span class="spacer"></span>
+  <button [matMenuTriggerFor]="menu" mat-button name="Account">{{authService.user?.email}}&nbsp;<mat-icon>account_circle</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <ng-template matMenuContent>
+        <button mat-menu-item routerLink="login" *ngIf="!authService.user">Log in</button>
+        <button mat-menu-item routerLink="account" *ngIf="authService.user">Account settings</button>
+        <button mat-menu-item *ngIf="authService.user" (click)="logout()">Log out</button>
+    </ng-template>
+  </mat-menu>
 </mat-toolbar>

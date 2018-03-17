@@ -10,4 +10,10 @@
 .title {
   margin: auto 8px;
   font-size: 2em;
+  cursor: pointer;
+  user-select: none;
+}
+.user {
+  font-size: .75em;
+  cursor: pointer;
 }
